@@ -15,8 +15,43 @@ const Footer = () => (
           <Typography variant="h4" fontFamily='"Playfair Display", serif'>
             NG Jewellers
           </Typography>
-          <Typography variant="body2" sx={{ mt: 2, color: 'rgba(255,255,255,0.7)' }}>
-            {brandIdentity.tagline}
+          <Typography
+            variant="body2"
+            sx={{
+              mt: 2,
+              color: 'rgba(255,255,255,0.7)',
+              fontSize: {
+                xs: '0.75rem',
+                sm: '0.875rem',
+                md: '0.875rem',
+              },
+              lineHeight: 1.6,
+              wordBreak: 'break-word',
+            }}
+          >
+            {brandIdentity.tagline.split(' • ').map((part, index, array) => (
+              <Box
+                key={index}
+                component="span"
+                sx={{
+                  display: {
+                    xs: 'block',
+                    sm: index < array.length - 1 ? 'inline' : 'block',
+                    md: 'inline',
+                  },
+                  '&:not(:last-child)::after': {
+                    content: {
+                      xs: '""',
+                      sm: '" • "',
+                      md: '" • "',
+                    },
+                    mx: { sm: 0.5, md: 0.5 },
+                  },
+                }}
+              >
+                {part}
+              </Box>
+            ))}
           </Typography>
         </Box>
 

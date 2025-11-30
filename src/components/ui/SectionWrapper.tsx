@@ -29,9 +29,16 @@ export const SectionWrapper = ({
   <Box
     component="section"
     id={id}
-    className={clsx('py-16 lg:py-24', backgroundClass[background], className)}
+    className={clsx('py-8 sm:py-12 md:py-16 lg:py-24', backgroundClass[background], className)}
   >
-    <Container maxWidth={maxWidth}>{children}</Container>
+    <Container
+      maxWidth={maxWidth}
+      sx={{
+        px: { xs: 2, sm: 3, md: 4 },
+      }}
+    >
+      {children}
+    </Container>
   </Box>
 )
 

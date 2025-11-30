@@ -16,7 +16,16 @@ const CategoriesPreviewSection = () => (
       align="center"
     />
 
-    <Box className="grid gap-6 lg:grid-cols-3">
+    <Box
+      className="grid gap-4 sm:gap-6"
+      sx={{
+        gridTemplateColumns: {
+          xs: '1fr',
+          sm: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)',
+        },
+      }}
+    >
       {jewelleryCategories.slice(0, 3).map((category) => (
         <CategoryCard key={category.id} category={category} />
       ))}

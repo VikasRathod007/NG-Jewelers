@@ -40,17 +40,25 @@ const Navbar = () => {
           backgroundColor: 'rgba(253, 251, 248, 0.9)',
         }}
       >
-        <Toolbar sx={{ gap: 3 }}>
+        <Toolbar sx={{ gap: { xs: 1, sm: 2, md: 3 }, px: { xs: 1, sm: 2, md: 3 } }}>
           <Box
             component={Link}
             to="/"
-            sx={{ textDecoration: 'none', color: 'inherit', flexGrow: 1, display: 'flex', alignItems: 'center', gap: 2 }}
+            sx={{
+              textDecoration: 'none',
+              color: 'inherit',
+              flexGrow: 1,
+              display: 'flex',
+              alignItems: 'center',
+              gap: { xs: 1, sm: 1.5, md: 2 },
+              minWidth: 0, // Prevent overflow
+            }}
           >
             {/* Logo placeholder - replace with actual logo image */}
             <Box
               sx={{
-                width: 48,
-                height: 48,
+                width: { xs: 40, sm: 44, md: 48 },
+                height: { xs: 40, sm: 44, md: 48 },
                 borderRadius: '50%',
                 bgcolor: 'primary.main',
                 display: 'flex',
@@ -59,15 +67,42 @@ const Navbar = () => {
                 flexShrink: 0,
               }}
             >
-              <Typography variant="h6" sx={{ color: 'white', fontWeight: 700 }}>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: 'white',
+                  fontWeight: 700,
+                  fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+                }}
+              >
                 NG
               </Typography>
             </Box>
-            <Box>
-              <Typography variant="h5" fontFamily='"Playfair Display", serif' sx={{ lineHeight: 1.2 }}>
+            <Box sx={{ minWidth: 0, flex: 1 }}>
+              <Typography
+                variant="h5"
+                fontFamily='"Playfair Display", serif'
+                sx={{
+                  lineHeight: 1.2,
+                  fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.5rem' },
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
                 NG Jewellers
               </Typography>
-              <Typography variant="caption" color="text.secondary" sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{
+                  display: { xs: 'none', sm: 'block' },
+                  fontSize: { xs: '0.65rem', sm: '0.75rem' },
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
                 {brandIdentity.location}
               </Typography>
             </Box>

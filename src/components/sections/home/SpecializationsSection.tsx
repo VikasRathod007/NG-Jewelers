@@ -25,18 +25,53 @@ const SpecializationsSection = () => (
       align="center"
     />
 
-    <Box className="grid gap-6 md:grid-cols-2">
+    <Box
+      className="grid gap-4 sm:gap-6"
+      sx={{
+        gridTemplateColumns: {
+          xs: '1fr',
+          md: 'repeat(2, 1fr)',
+        },
+      }}
+    >
       {coreSpecializations.map((spec) => (
-        <Box key={spec.title} className="glass-panel p-6 flex gap-4">
+        <Box
+          key={spec.title}
+          className="glass-panel flex gap-3 sm:gap-4"
+          sx={{
+            p: { xs: 4, sm: 5, md: 6 },
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { xs: 'center', sm: 'flex-start' },
+            textAlign: { xs: 'center', sm: 'left' },
+          }}
+        >
           <Box
-            className="w-14 h-14 rounded-full flex items-center justify-center text-white"
-            sx={{ background: 'linear-gradient(135deg,#B76E78,#E6BE8A)' }}
+            className="rounded-full flex items-center justify-center text-white flex-shrink-0"
+            sx={{
+              width: { xs: 48, sm: 56 },
+              height: { xs: 48, sm: 56 },
+              background: 'linear-gradient(135deg,#B76E78,#E6BE8A)',
+            }}
           >
             {iconMap[spec.icon]}
           </Box>
-          <Box>
-            <Typography variant="h6">{spec.title}</Typography>
-            <Typography variant="body2" color="text.secondary">
+          <Box sx={{ flex: 1, minWidth: 0 }}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+                mb: 1,
+              }}
+            >
+              {spec.title}
+            </Typography>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{
+                fontSize: { xs: '0.875rem', sm: '0.875rem' },
+              }}
+            >
               {spec.description}
             </Typography>
           </Box>
