@@ -1,0 +1,44 @@
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1f1b16;
+  background-color: #fdfbf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  background-color: #fdfbf8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/30 bg-white/70 shadow-soft backdrop-blur;
+}
+
+.section-light {
+  @apply bg-white text-brand-dark;
+}
+
+.section-muted {
+  @apply bg-neutral-100 text-brand-dark;
+}
