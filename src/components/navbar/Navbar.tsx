@@ -18,6 +18,7 @@ import { useMemo, useState } from 'react'
 import { brandIdentity } from '@/data/brand'
 import { highlightNav, primaryNav } from '@/data/navigation'
 import BrandButton from '@/components/ui/BrandButton'
+import logoImage from '@/assets/images/NG_logo.png'
 
 const Navbar = () => {
   const location = useLocation()
@@ -54,30 +55,18 @@ const Navbar = () => {
               minWidth: 0, // Prevent overflow
             }}
           >
-            {/* Logo placeholder - replace with actual logo image */}
+            {/* NG Jewellers Logo */}
             <Box
+              component="img"
+              src={logoImage}
+              alt="NG Jewellers Logo"
               sx={{
                 width: { xs: 40, sm: 44, md: 48 },
                 height: { xs: 40, sm: 44, md: 48 },
-                borderRadius: '50%',
-                bgcolor: 'primary.main',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                objectFit: 'contain',
                 flexShrink: 0,
               }}
-            >
-              <Typography
-                variant="h6"
-                sx={{
-                  color: 'white',
-                  fontWeight: 700,
-                  fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
-                }}
-              >
-                NG
-              </Typography>
-            </Box>
+            />
             <Box sx={{ minWidth: 0, flex: 1 }}>
               <Typography
                 variant="h5"
@@ -88,6 +77,7 @@ const Navbar = () => {
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
+                  color: '#D4AF37',
                 }}
               >
                 NG Jewellers

@@ -12,7 +12,11 @@ const Footer = () => (
     <Box className="max-w-screen-xl mx-auto px-6 lg:px-8">
       <Box className="grid gap-8 md:grid-cols-3">
         <Box>
-          <Typography variant="h4" fontFamily='"Playfair Display", serif'>
+          <Typography
+            variant="h4"
+            fontFamily='"Playfair Display", serif'
+            sx={{ color: '#D4AF37' }}
+          >
             NG Jewellers
           </Typography>
           <Typography

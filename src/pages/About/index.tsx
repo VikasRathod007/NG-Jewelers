@@ -1,4 +1,8 @@
-import { Avatar, Box, Card, CardContent, Typography } from '@mui/material'
+import { Box, Card, CardContent, Typography } from '@mui/material'
+import DiamondIcon from '@mui/icons-material/Diamond'
+import VerifiedIcon from '@mui/icons-material/Verified'
+import LocalShippingIcon from '@mui/icons-material/LocalShipping'
+import SecurityIcon from '@mui/icons-material/Security'
 
 import SectionHeading from '@/components/ui/SectionHeading'
 import SectionWrapper from '@/components/ui/SectionWrapper'
@@ -6,7 +10,6 @@ import SEOHead from '@/components/ui/SEOHead'
 import { brandIdentity } from '@/data/brand'
 import { pageMeta } from '@/data/meta'
 import { processSnapshots, whyChooseUsCards } from '@/data/services'
-import { artisanTeam } from '@/data/team'
 
 const timeline = [
   {
@@ -94,30 +97,91 @@ const AboutPage = () => {
 
       <SectionWrapper background="muted">
         <SectionHeading
-          eyebrow="Team"
-          title="Meet the artisans & directors"
+          eyebrow="Our Promise"
+          title="What sets us apart"
           align="center"
         />
         <Box className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {artisanTeam.map((member) => (
-            <Card key={member.name} className="h-full text-center">
-              <CardContent>
-                <Avatar
-                  src={member.avatar}
-                  alt={member.name}
-                  sx={{ width: 96, height: 96, mx: 'auto', mb: 2 }}
-                />
-                <Typography variant="h6">{member.name}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {member.role}
-                </Typography>
-                <Typography variant="body2">{member.experience}</Typography>
-                <Typography variant="caption" color="text.secondary">
-                  {member.specialty}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
+          <Card className="h-full text-center">
+            <CardContent>
+              <DiamondIcon
+                sx={{
+                  fontSize: 48,
+                  color: 'primary.main',
+                  mb: 2,
+                  mx: 'auto',
+                  display: 'block',
+                }}
+              />
+              <Typography variant="h6" gutterBottom>
+                Premium Quality
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Every piece is crafted with precision using the finest materials and traditional
+                techniques passed down through generations.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className="h-full text-center">
+            <CardContent>
+              <VerifiedIcon
+                sx={{
+                  fontSize: 48,
+                  color: 'primary.main',
+                  mb: 2,
+                  mx: 'auto',
+                  display: 'block',
+                }}
+              />
+              <Typography variant="h6" gutterBottom>
+                BIS Hallmarked
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                All our jewellery is BIS certified, ensuring purity and authenticity. Your trust
+                is our foundation.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className="h-full text-center">
+            <CardContent>
+              <LocalShippingIcon
+                sx={{
+                  fontSize: 48,
+                  color: 'primary.main',
+                  mb: 2,
+                  mx: 'auto',
+                  display: 'block',
+                }}
+              />
+              <Typography variant="h6" gutterBottom>
+                Nationwide Delivery
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                We deliver across India through trusted logistics partners, ensuring your precious
+                jewellery reaches you safely.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className="h-full text-center">
+            <CardContent>
+              <SecurityIcon
+                sx={{
+                  fontSize: 48,
+                  color: 'primary.main',
+                  mb: 2,
+                  mx: 'auto',
+                  display: 'block',
+                }}
+              />
+              <Typography variant="h6" gutterBottom>
+                Secure & Transparent
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Complete transparency in pricing, gold weight calculations, and documentation.
+                Your peace of mind matters to us.
+              </Typography>
+            </CardContent>
+          </Card>
         </Box>
       </SectionWrapper>
 
