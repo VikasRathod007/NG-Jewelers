@@ -39,7 +39,7 @@ jobs:
       - name: Build site
         run: pnpm build
         env:
-          VITE_BASE_PATH: /NG-Jewelers/
+          VITE_BASE_PATH: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
