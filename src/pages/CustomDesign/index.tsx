@@ -38,13 +38,12 @@ const CustomDesignPage = () => {
         <Box className="grid gap-8 lg:grid-cols-2 items-center">
           <Box>
             <SectionHeading
-              eyebrow="Custom Atelier"
-              title="Submit your bespoke jewellery brief"
-              subtitle="Share your ideas, heirloom inspiration or Pinterest board."
+              eyebrow="Custom design"
+              title="Tell us what jewellery you want"
+              subtitle="Share your ideas, old family jewellery or online pictures."
             />
             <Typography variant="body1" color="text.secondary">
-              Our concierge will respond within one working day with a discovery call slot,
-              estimated budgets and timeline for your project.
+              Our team will reply within one working day with a call time, rough budget and time needed.
             </Typography>
           </Box>
           <Box

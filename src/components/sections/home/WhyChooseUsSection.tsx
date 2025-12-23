@@ -9,8 +9,8 @@ const WhyChooseUsSection = () => (
   <SectionWrapper id="why-us">
     <SectionHeading
       eyebrow="Why choose us?"
-      title="A boutique atelier trusted across generations"
-      subtitle="Transparent processes, ethical sourcing and concierge-level service keep NG patrons returning."
+  title="A jewellery shop trusted by families"
+  subtitle="Clear process, honest gold and friendly service keep customers coming back."
       align="center"
     />
 

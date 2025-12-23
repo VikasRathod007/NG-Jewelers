@@ -8,8 +8,8 @@ const ServiceAreasSection = () => (
   <SectionWrapper background="muted">
     <SectionHeading
       eyebrow="Service areas"
-      title="Serving Indore & beyond"
-      subtitle="Doorstep delivery across Madhya Pradesh with insured logistics partners."
+  title="Serving Indore and nearby cities"
+  subtitle="Home delivery across Madhya Pradesh with trusted partners."
       align="center"
     />
 
@@ -28,7 +28,7 @@ const ServiceAreasSection = () => (
       </Box>
       <Box>
         <Typography variant="h6" sx={{ mb: 2 }}>
-          Priority concierge coverage
+          Main service areas
         </Typography>
         <Box className="flex flex-wrap gap-3">
           {brandIdentity.serviceAreas.map((city) => (
@@ -42,8 +42,7 @@ const ServiceAreasSection = () => (
           ))}
         </Box>
         <Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>
-          Global virtual fittings and insured international shipping are available
-          for bespoke commissions.
+          We also do Pan India shipping through trusted logistics partners.
         </Typography>
       </Box>
     </Box>

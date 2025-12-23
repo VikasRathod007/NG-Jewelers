@@ -1,4 +1,4 @@
-import CtaSection from '@/components/sections/home/CtaSection'
+// import CtaSection from '@/components/sections/home/CtaSection'
 import CategoriesPreviewSection from '@/components/sections/home/CategoriesPreviewSection'
 import CraftsmanshipSection from '@/components/sections/home/CraftsmanshipSection'
 import HeroSection from '@/components/sections/home/HeroSection'
@@ -20,9 +20,9 @@ const HomePage = () => {
       <WhyChooseUsSection />
       <CategoriesPreviewSection />
       <CraftsmanshipSection />
-      <ServiceAreasSection />
       <TestimonialsSection />
-      <CtaSection />
+      <ServiceAreasSection />
+      {/* <CtaSection /> */}
     </>
   )
 }

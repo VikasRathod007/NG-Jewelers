@@ -122,7 +122,7 @@ const ContactPage = () => {
         </Box>
       </SectionWrapper>
 
-      <SectionWrapper>
+      {/* <SectionWrapper>
         <SectionHeading
           eyebrow="Enquire"
           title="Send an inquiry"
@@ -163,7 +163,7 @@ const ContactPage = () => {
             Submit inquiry
           </BrandButton>
         </Box>
-      </SectionWrapper>
+      </SectionWrapper> */}
     </>
   );
 };

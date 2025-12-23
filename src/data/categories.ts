@@ -19,7 +19,7 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'gold-handmade',
     name: 'Gold Handmade Jewellery',
     description:
-      'One-of-a-kind handcrafted pieces featuring intricate meenakari, nakashi and temple-inspired motifs.',
+  'Special handmade pieces with meenakari, nakashi and temple-style designs.',
     image: handmadeImg,
     highlights: ['22K BIS Hallmarked', 'In-house design studio', 'Lifetime polishing'],
     ctaLabel: 'Explore handmade work',
@@ -28,7 +28,7 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'bridal',
     name: 'Bridal Jewellery',
     description:
-      'Signature bridal sets, layered haar and statement maang tikkas that narrate your heritage.',
+  'Bridal sets, long haars and maang tikkas that match your family style and culture.',
     image: bridalImg,
     highlights: ['Custom ensembles', 'Styling consultation', 'Assured buyback'],
     ctaLabel: 'Plan bridal trousseau',
@@ -37,7 +37,7 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'custom',
     name: 'Custom Jewellery',
     description:
-      'Translate your Pinterest boards or sketches into heirloom-quality pieces with our CAD + artisan workflow.',
+  'We turn your photos or drawings into strong gold pieces you can use for many years.',
     image: customImg,
     highlights: ['3D previews', 'Flexible budgets', 'Dedicated concierge'],
     ctaLabel: 'Start bespoke brief',
@@ -46,7 +46,7 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'daily',
     name: 'Daily Wear',
     description:
-      'Lightweight chains, stackable rings and office-ready pieces finished with hypoallergenic comfort.',
+  'Lightweight chains, rings and office-friendly pieces that are comfortable to wear every day.',
     image: dailyImg,
     highlights: ['Minimal silhouettes', 'Diamond detailing', 'After-sales care'],
     ctaLabel: 'Shop daily classics',
@@ -55,7 +55,7 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'wholesale',
     name: 'Wholesale B2B',
     description:
-      'Bulk handcrafted inventory for boutique jewellers and studios with consistent timelines.',
+  'Handmade stock in bulk for jewellery shops and studios, delivered on time.',
     image: wholesaleImg,
     highlights: ['Pan-India shipping', 'Design-only partnerships', 'Private labelling'],
     ctaLabel: 'Book a sourcing call',
@@ -64,10 +64,10 @@ export const jewelleryCategories: JewelleryCategory[] = [
     id: 'artisan',
     name: 'Artisan Collaborations',
     description:
-      'Limited edition capsules co-created with award-winning karigars and fashion houses.',
+  'Special small collections made together with expert karigars and designers.',
     image: artisanImg,
-    highlights: ['Story-led capsules', 'Press-ready content', 'Exclusive drops'],
-    ctaLabel: 'Pitch collaboration',
+  highlights: ['Special themed collections', 'Photos and content for your marketing', 'Limited stock launches'],
+  ctaLabel: 'Share your idea',
   },
 ]
 
