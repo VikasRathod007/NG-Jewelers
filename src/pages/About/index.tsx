@@ -56,7 +56,6 @@ const AboutPage = () => {
         />
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 720 }}>
           NG Jewellers is a leading manufacturer of handmade and custom gold jewellery in Indore, known for exquisite craftsmanship, modern designs, and ethical business practices. With years of expertise in traditional jewellery making, we specialize in creating unique, custom-designed gold jewellery pieces that reflect both timeless elegance and modern style.
-
         </Typography>
       </SectionWrapper>
 
