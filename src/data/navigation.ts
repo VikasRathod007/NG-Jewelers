@@ -12,6 +12,7 @@ export const primaryNav: NavItem[] = [
   { label: "Contact", path: "/contact" },
 ];
 
+
 export const highlightNav: NavItem[] = [
   { label: "Why NG", path: "/#why-us" },
   { label: "Services", path: "/#services" },
