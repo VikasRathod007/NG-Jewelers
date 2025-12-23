@@ -1,15 +1,15 @@
-import { Box, Chip, Typography } from '@mui/material'
+import { Box, Chip, Typography } from "@mui/material";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import { brandIdentity } from '@/data/brand'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import { brandIdentity } from "@/data/brand";
 
 const ServiceAreasSection = () => (
   <SectionWrapper background="muted">
     <SectionHeading
       eyebrow="Service areas"
-  title="Serving Indore and nearby cities"
-  subtitle="Home delivery across Madhya Pradesh with trusted partners."
+      title="Serving Indore and nearby cities"
+      subtitle="Home delivery across Madhya Pradesh with trusted partners."
       align="center"
     />
 
@@ -47,7 +47,6 @@ const ServiceAreasSection = () => (
       </Box>
     </Box>
   </SectionWrapper>
-)
+);
 
-export default ServiceAreasSection
-
+export default ServiceAreasSection;
