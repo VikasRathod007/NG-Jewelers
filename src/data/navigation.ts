@@ -7,7 +7,7 @@ export const primaryNav: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Categories', path: '/categories' },
-  // { label: 'Custom Design', path: '/custom-design' },
+  { label: 'Custom Design', path: '/custom-design' },
   { label: 'Contact', path: '/contact' },
 ]
 
