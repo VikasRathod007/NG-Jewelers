@@ -1,16 +1,16 @@
-import { Box, Typography } from '@mui/material'
-import { motion } from 'framer-motion'
+import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import { whyChooseUsCards } from '@/data/services'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import { whyChooseUsCards } from "@/data/services";
 
 const WhyChooseUsSection = () => (
   <SectionWrapper id="why-us">
     <SectionHeading
       eyebrow="Why choose us?"
-  title="A jewellery shop trusted by families"
-  subtitle="Clear process, honest gold and friendly service keep customers coming back."
+      title="A jewellery shop trusted by families"
+      subtitle="Clear process, honest gold and friendly service keep customers coming back."
       align="center"
     />
 
@@ -32,7 +32,6 @@ const WhyChooseUsSection = () => (
       ))}
     </Box>
   </SectionWrapper>
-)
+);
 
-export default WhyChooseUsSection
-
+export default WhyChooseUsSection;

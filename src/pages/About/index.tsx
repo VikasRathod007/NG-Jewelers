@@ -1,22 +1,22 @@
-import { Box, Card, CardContent, Typography } from '@mui/material'
-import DiamondIcon from '@mui/icons-material/Diamond'
-import VerifiedIcon from '@mui/icons-material/Verified'
-import LocalShippingIcon from '@mui/icons-material/LocalShipping'
-import SecurityIcon from '@mui/icons-material/Security'
-import PlaceIcon from '@mui/icons-material/Place'
-import PublicIcon from '@mui/icons-material/Public'
+import { Box, Card, CardContent, Typography } from "@mui/material";
+import DiamondIcon from "@mui/icons-material/Diamond";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import SecurityIcon from "@mui/icons-material/Security";
+import PlaceIcon from "@mui/icons-material/Place";
+import PublicIcon from "@mui/icons-material/Public";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import SEOHead from '@/components/ui/SEOHead'
-import { brandIdentity } from '@/data/brand'
-import { pageMeta } from '@/data/meta'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SEOHead from "@/components/ui/SEOHead";
+import { brandIdentity } from "@/data/brand";
+import { pageMeta } from "@/data/meta";
 import {
   aboutSpecializationsExtended,
   aboutWhyChoosePoints,
   processSnapshots,
   whyChooseUsCards,
-} from '@/data/services'
+} from "@/data/services";
 
 // const timeline = [
 //   {
@@ -42,7 +42,7 @@ import {
 // ]
 
 const AboutPage = () => {
-  const meta = pageMeta.about
+  const meta = pageMeta.about;
 
   return (
     <>
@@ -56,6 +56,7 @@ const AboutPage = () => {
         />
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 720 }}>
           NG Jewellers is a leading manufacturer of handmade and custom gold jewellery in Indore, known for exquisite craftsmanship, modern designs, and ethical business practices. With years of expertise in traditional jewellery making, we specialize in creating unique, custom-designed gold jewellery pieces that reflect both timeless elegance and modern style.
+
         </Typography>
       </SectionWrapper>
 
@@ -132,47 +133,47 @@ const AboutPage = () => {
           {aboutWhyChoosePoints.map((point) => (
             <Card key={point.title} className="h-full text-center">
               <CardContent>
-                {point.title === 'Skilled Artisans' && (
+                {point.title === "Skilled Artisans" && (
                   <DiamondIcon
                     sx={{
                       fontSize: 48,
-                      color: 'primary.main',
+                      color: "primary.main",
                       mb: 2,
-                      mx: 'auto',
-                      display: 'block',
+                      mx: "auto",
+                      display: "block",
                     }}
                   />
                 )}
-                {point.title === '100% Hallmarked Gold' && (
+                {point.title === "100% Hallmarked Gold" && (
                   <VerifiedIcon
                     sx={{
                       fontSize: 48,
-                      color: 'primary.main',
+                      color: "primary.main",
                       mb: 2,
-                      mx: 'auto',
-                      display: 'block',
+                      mx: "auto",
+                      display: "block",
                     }}
                   />
                 )}
-                {point.title === 'Bulk Manufacturing Ready' && (
+                {point.title === "Bulk Manufacturing Ready" && (
                   <LocalShippingIcon
                     sx={{
                       fontSize: 48,
-                      color: 'primary.main',
+                      color: "primary.main",
                       mb: 2,
-                      mx: 'auto',
-                      display: 'block',
+                      mx: "auto",
+                      display: "block",
                     }}
                   />
                 )}
-                {point.title === 'Transparent & Relationship-First' && (
+                {point.title === "Transparent & Relationship-First" && (
                   <SecurityIcon
                     sx={{
                       fontSize: 48,
-                      color: 'primary.main',
+                      color: "primary.main",
                       mb: 2,
-                      mx: 'auto',
-                      display: 'block',
+                      mx: "auto",
+                      display: "block",
                     }}
                   />
                 )}
@@ -205,8 +206,8 @@ const AboutPage = () => {
                 </Typography>
               </Box>
               <Typography variant="body2" color="text.secondary">
-                {brandIdentity.serviceAreas.join(', ')} and surrounding regions across
-                Madhya Pradesh with doorstep delivery options.
+                {brandIdentity.serviceAreas.join(", ")} and surrounding regions
+                across Madhya Pradesh with doorstep delivery options.
               </Typography>
             </CardContent>
           </Card>
@@ -219,7 +220,8 @@ const AboutPage = () => {
                 </Typography>
               </Box>
               <Typography variant="body2" color="text.secondary">
-                {brandIdentity.logisticsNarrative} {brandIdentity.exportNarrative}
+                {brandIdentity.logisticsNarrative}{" "}
+                {brandIdentity.exportNarrative}
               </Typography>
             </CardContent>
           </Card>
@@ -252,8 +254,7 @@ const AboutPage = () => {
         </Box>
       </SectionWrapper>
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
-
+export default AboutPage;

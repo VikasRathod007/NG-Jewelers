@@ -1,19 +1,19 @@
-import { Box, Chip, Typography } from '@mui/material'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Box, Chip, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-import heroVisual from '@/assets/images/hero-banner.webp'
-import BrandButton from '@/components/ui/BrandButton'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import StatHighlight from '@/components/ui/StatHighlight'
-import { brandIdentity } from '@/data/brand'
+import heroVisual from "@/assets/images/hero-banner.webp";
+import BrandButton from "@/components/ui/BrandButton";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import StatHighlight from "@/components/ui/StatHighlight";
+import { brandIdentity } from "@/data/brand";
 
 const HeroSection = () => (
   <SectionWrapper className="relative overflow-hidden">
     <Box
       className="grid gap-6 sm:gap-8 lg:gap-10 lg:grid-cols-2"
       sx={{
-        alignItems: 'center',
+        alignItems: "center",
         px: { xs: 0, sm: 2 },
       }}
     >
@@ -26,8 +26,8 @@ const HeroSection = () => (
           label="Luxury handcrafted in Indore"
           sx={{
             mb: 2,
-            backgroundColor: 'rgba(183, 110, 120, 0.12)',
-            color: 'primary.main',
+            backgroundColor: "rgba(183, 110, 120, 0.12)",
+            color: "primary.main",
             borderRadius: 999,
           }}
         />
@@ -35,11 +35,11 @@ const HeroSection = () => (
           variant="h1"
           sx={{
             fontSize: {
-              xs: '1.75rem', // 28px on mobile
-              sm: '2.25rem', // 36px on small tablets
-              md: '2.75rem', // 44px on medium screens
-              lg: '3.5rem',  // 56px on large screens
-              xl: '4rem',    // 64px on extra large
+              xs: "1.75rem", // 28px on mobile
+              sm: "2.25rem", // 36px on small tablets
+              md: "2.75rem", // 44px on medium screens
+              lg: "3.5rem", // 56px on large screens
+              xl: "4rem", // 64px on extra large
             },
             lineHeight: {
               xs: 1.2,
@@ -48,21 +48,21 @@ const HeroSection = () => (
             },
             fontWeight: 700,
             fontFamily: '"Playfair Display", serif',
-            wordBreak: 'break-word',
-            overflowWrap: 'break-word',
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
           }}
         >
-          {brandIdentity.tagline.split(' • ').map((part, index, array) => (
+          {brandIdentity.tagline.split(" • ").map((part, index, array) => (
             <Box
               key={index}
               component="span"
               sx={{
                 display: {
-                  xs: 'block',
-                  sm: index < array.length - 1 ? 'inline' : 'block',
-                  md: 'inline',
+                  xs: "block",
+                  sm: index < array.length - 1 ? "inline" : "block",
+                  md: "inline",
                 },
-                '&:not(:last-child)::after': {
+                "&:not(:last-child)::after": {
                   content: {
                     xs: '""',
                     sm: '" • "',
@@ -81,8 +81,8 @@ const HeroSection = () => (
           color="text.secondary"
           sx={{
             mt: { xs: 2, sm: 3 },
-            maxWidth: { xs: '100%', sm: 540 },
-            fontSize: { xs: '0.95rem', sm: '1rem' },
+            maxWidth: { xs: "100%", sm: 540 },
+            fontSize: { xs: "0.95rem", sm: "1rem" },
             lineHeight: 1.6,
           }}
         >
@@ -93,11 +93,7 @@ const HeroSection = () => (
           <BrandButton component={Link} to="/categories">
             View Collections
           </BrandButton>
-          <BrandButton
-            component={Link}
-            to="/custom-design"
-            tone="secondary"
-          >
+          <BrandButton component={Link} to="/custom-design" tone="secondary">
             Custom Brief
           </BrandButton>
         </Box>
@@ -106,8 +102,8 @@ const HeroSection = () => (
           className="mt-6 sm:mt-8 grid gap-4 sm:gap-6"
           sx={{
             gridTemplateColumns: {
-              xs: '1fr',
-              sm: 'repeat(3, 1fr)',
+              xs: "1fr",
+              sm: "repeat(3, 1fr)",
             },
           }}
         >
@@ -132,24 +128,30 @@ const HeroSection = () => (
         <Box
           className="glass-panel p-3 sm:p-4 max-w-xs"
           sx={{
-            position: { xs: 'relative', sm: 'absolute' },
+            position: { xs: "relative", sm: "absolute" },
             bottom: { sm: -24 },
             right: { sm: 24 },
             mt: { xs: 2, sm: 0 },
-            mx: { xs: 'auto', sm: 0 },
+            mx: { xs: "auto", sm: 0 },
           }}
         >
-          <Typography variant="subtitle2" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
+          <Typography
+            variant="subtitle2"
+            sx={{ fontSize: { xs: "0.875rem", sm: "1rem" } }}
+          >
             Studio services
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ fontSize: { xs: "0.75rem", sm: "0.875rem" } }}
+          >
             {brandIdentity.serviceHub}
           </Typography>
         </Box>
       </motion.div>
     </Box>
   </SectionWrapper>
-)
+);
 
-export default HeroSection
-
+export default HeroSection;

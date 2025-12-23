@@ -1,15 +1,15 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from "@mui/material";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import { processSnapshots } from '@/data/services'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import { processSnapshots } from "@/data/services";
 
 const CraftsmanshipSection = () => (
   <SectionWrapper>
     <SectionHeading
       eyebrow="Craftsmanship"
-  title="Modern tools. Traditional finishing."
-  subtitle="You can understand each step of how we make your jewellery."
+      title="Modern tools. Traditional finishing."
+      subtitle="You can understand each step of how we make your jewellery."
       align="center"
     />
 
@@ -32,7 +32,6 @@ const CraftsmanshipSection = () => (
       ))}
     </Box>
   </SectionWrapper>
-)
+);
 
-export default CraftsmanshipSection
-
+export default CraftsmanshipSection;

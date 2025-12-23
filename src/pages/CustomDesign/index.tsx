@@ -1,34 +1,39 @@
-import { Alert, Box, TextField, Typography } from '@mui/material'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { Alert, Box, TextField, Typography } from "@mui/material";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
-import BrandButton from '@/components/ui/BrandButton'
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import SEOHead from '@/components/ui/SEOHead'
-import { heroCustomAsset, customizationHighlights, customizationSteps, previousCustomWork } from '@/data/customization'
-import { pageMeta } from '@/data/meta'
+import BrandButton from "@/components/ui/BrandButton";
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SEOHead from "@/components/ui/SEOHead";
+import {
+  heroCustomAsset,
+  customizationHighlights,
+  customizationSteps,
+  previousCustomWork,
+} from "@/data/customization";
+import { pageMeta } from "@/data/meta";
 
 type CustomBriefForm = {
-  name: string
-  contact: string
-  jewelleryType: string
-  budget: string
-  inspiration: string
-  message: string
-}
+  name: string;
+  contact: string;
+  jewelleryType: string;
+  budget: string;
+  inspiration: string;
+  message: string;
+};
 
 const CustomDesignPage = () => {
-  const meta = pageMeta.customDesign
-  const { register, handleSubmit, reset } = useForm<CustomBriefForm>()
-  const [submitted, setSubmitted] = useState(false)
+  const meta = pageMeta.customDesign;
+  const { register, handleSubmit, reset } = useForm<CustomBriefForm>();
+  const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = (values: CustomBriefForm) => {
-    console.table(values)
-    setSubmitted(true)
-    reset()
-    setTimeout(() => setSubmitted(false), 5000)
-  }
+    console.table(values);
+    setSubmitted(true);
+    reset();
+    setTimeout(() => setSubmitted(false), 5000);
+  };
 
   return (
     <>
@@ -43,7 +48,8 @@ const CustomDesignPage = () => {
               subtitle="Share your ideas, old family jewellery or online pictures."
             />
             <Typography variant="body1" color="text.secondary">
-              Our team will reply within one working day with a call time, rough budget and time needed.
+              Our team will reply within one working day with a call time, rough
+              budget and time needed.
             </Typography>
           </Box>
           <Box
@@ -124,36 +130,42 @@ const CustomDesignPage = () => {
           title="Custom design request form"
           align="center"
         />
-          <Box
-            component="form"
-            className="glass-panel p-6 space-y-4"
-            onSubmit={handleSubmit(onSubmit)}
-          >
+        <Box
+          component="form"
+          className="glass-panel p-6 space-y-4"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           {submitted && (
-            <Alert severity="success">Thank you! We will reach out shortly.</Alert>
+            <Alert severity="success">
+              Thank you! We will reach out shortly.
+            </Alert>
           )}
           <Box className="grid gap-4 md:grid-cols-2">
             <TextField
               label="Full name"
               fullWidth
-              {...register('name', { required: true })}
+              {...register("name", { required: true })}
             />
             <TextField
               label="Phone / WhatsApp"
               fullWidth
-              {...register('contact', { required: true })}
+              {...register("contact", { required: true })}
             />
             <TextField
               label="Jewellery type"
               fullWidth
-              {...register('jewelleryType', { required: true })}
+              {...register("jewelleryType", { required: true })}
             />
-            <TextField label="Estimated budget" fullWidth {...register('budget')} />
+            <TextField
+              label="Estimated budget"
+              fullWidth
+              {...register("budget")}
+            />
             <TextField
               label="Inspiration link (Pinterest / Drive)"
               fullWidth
               className="md:col-span-2"
-              {...register('inspiration')}
+              {...register("inspiration")}
             />
             <TextField
               label="Tell us more"
@@ -161,7 +173,7 @@ const CustomDesignPage = () => {
               multiline
               minRows={4}
               className="md:col-span-2"
-              {...register('message')}
+              {...register("message")}
             />
           </Box>
           <BrandButton type="submit" size="large">
@@ -170,8 +182,7 @@ const CustomDesignPage = () => {
         </Box>
       </SectionWrapper>
     </>
-  )
-}
+  );
+};
 
-export default CustomDesignPage
-
+export default CustomDesignPage;

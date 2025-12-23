@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from "@mui/material";
 
 type StatHighlightProps = {
-  value: string
-  label: string
-}
+  value: string;
+  label: string;
+};
 
 const StatHighlight = ({ value, label }: StatHighlightProps) => (
   <Box className="text-center lg:text-left">
@@ -17,7 +17,6 @@ const StatHighlight = ({ value, label }: StatHighlightProps) => (
       {label}
     </Typography>
   </Box>
-)
+);
 
-export default StatHighlight
-
+export default StatHighlight;

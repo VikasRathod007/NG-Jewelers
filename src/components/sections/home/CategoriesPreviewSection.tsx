@@ -1,11 +1,11 @@
-import { Box } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import BrandButton from '@/components/ui/BrandButton'
-import CategoryCard from '@/components/ui/CategoryCard'
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import { jewelleryCategories } from '@/data/categories'
+import BrandButton from "@/components/ui/BrandButton";
+import CategoryCard from "@/components/ui/CategoryCard";
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import { jewelleryCategories } from "@/data/categories";
 
 const CategoriesPreviewSection = () => (
   <SectionWrapper>
@@ -20,9 +20,9 @@ const CategoriesPreviewSection = () => (
       className="grid gap-4 sm:gap-6"
       sx={{
         gridTemplateColumns: {
-          xs: '1fr',
-          sm: 'repeat(2, 1fr)',
-          lg: 'repeat(3, 1fr)',
+          xs: "1fr",
+          sm: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
         },
       }}
     >
@@ -36,7 +36,6 @@ const CategoriesPreviewSection = () => (
       </BrandButton>
     </Box>
   </SectionWrapper>
-)
+);
 
-export default CategoriesPreviewSection
-
+export default CategoriesPreviewSection;

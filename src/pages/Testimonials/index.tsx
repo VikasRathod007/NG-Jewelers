@@ -1,14 +1,14 @@
-import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
-import { Box, Card, CardContent, Typography } from '@mui/material'
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import SEOHead from '@/components/ui/SEOHead'
-import { pageMeta } from '@/data/meta'
-import { testimonials } from '@/data/testimonials'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SEOHead from "@/components/ui/SEOHead";
+import { pageMeta } from "@/data/meta";
+import { testimonials } from "@/data/testimonials";
 
 const TestimonialsPage = () => {
-  const meta = pageMeta.testimonials
+  const meta = pageMeta.testimonials;
 
   return (
     <>
@@ -26,13 +26,17 @@ const TestimonialsPage = () => {
               key={item.id}
               className="h-full rounded-3xl shadow-lg"
               sx={{
-                background: 'linear-gradient(to bottom right, rgba(244, 228, 188, 0.9), rgba(255, 255, 255, 1))',
-                border: '1px solid rgba(212, 175, 55, 0.2)',
+                background:
+                  "linear-gradient(to bottom right, rgba(244, 228, 188, 0.9), rgba(255, 255, 255, 1))",
+                border: "1px solid rgba(212, 175, 55, 0.2)",
               }}
             >
               <CardContent sx={{ p: 4 }}>
-                <FormatQuoteIcon sx={{ color: 'primary.main', fontSize: 40 }} />
-                <Typography variant="body1" sx={{ mt: 2, color: 'text.primary' }}>
+                <FormatQuoteIcon sx={{ color: "primary.main", fontSize: 40 }} />
+                <Typography
+                  variant="body1"
+                  sx={{ mt: 2, color: "text.primary" }}
+                >
                   {item.quote}
                 </Typography>
                 <Typography variant="subtitle1" sx={{ mt: 3, fontWeight: 600 }}>
@@ -47,8 +51,7 @@ const TestimonialsPage = () => {
         </Box>
       </SectionWrapper>
     </>
-  )
-}
+  );
+};
 
-export default TestimonialsPage
-
+export default TestimonialsPage;
