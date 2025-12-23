@@ -1,22 +1,22 @@
-import CloseIcon from '@mui/icons-material/Close'
+import CloseIcon from "@mui/icons-material/Close";
 import {
   Box,
   Dialog,
   DialogContent,
   IconButton,
   Typography,
-} from '@mui/material'
-import { useState } from 'react'
+} from "@mui/material";
+import { useState } from "react";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import SEOHead from '@/components/ui/SEOHead'
-import { galleryShowcase, type GalleryItem } from '@/data/gallery'
-import { pageMeta } from '@/data/meta'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SEOHead from "@/components/ui/SEOHead";
+import { galleryShowcase, type GalleryItem } from "@/data/gallery";
+import { pageMeta } from "@/data/meta";
 
 const PortfolioPage = () => {
-  const meta = pageMeta.portfolio
-  const [activeItem, setActiveItem] = useState<GalleryItem | null>(null)
+  const meta = pageMeta.portfolio;
+  const [activeItem, setActiveItem] = useState<GalleryItem | null>(null);
 
   return (
     <>
@@ -50,11 +50,15 @@ const PortfolioPage = () => {
             </Box>
           ))}
         </Box>
-        <Dialog open={Boolean(activeItem)} onClose={() => setActiveItem(null)} maxWidth="md">
-          <DialogContent sx={{ position: 'relative', p: 0 }}>
+        <Dialog
+          open={Boolean(activeItem)}
+          onClose={() => setActiveItem(null)}
+          maxWidth="md"
+        >
+          <DialogContent sx={{ position: "relative", p: 0 }}>
             <IconButton
               onClick={() => setActiveItem(null)}
-              sx={{ position: 'absolute', right: 8, top: 8, zIndex: 10 }}
+              sx={{ position: "absolute", right: 8, top: 8, zIndex: 10 }}
             >
               <CloseIcon />
             </IconButton>
@@ -64,7 +68,7 @@ const PortfolioPage = () => {
                   component="img"
                   src={activeItem.image}
                   alt={activeItem.title}
-                  sx={{ width: '100%', maxHeight: 500, objectFit: 'cover' }}
+                  sx={{ width: "100%", maxHeight: 500, objectFit: "cover" }}
                 />
                 <Box sx={{ p: 3 }}>
                   <Typography variant="h6">{activeItem.title}</Typography>
@@ -78,8 +82,7 @@ const PortfolioPage = () => {
         </Dialog>
       </SectionWrapper>
     </>
-  )
-}
+  );
+};
 
-export default PortfolioPage
-
+export default PortfolioPage;

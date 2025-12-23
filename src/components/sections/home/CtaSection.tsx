@@ -1,8 +1,8 @@
-import { Box, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import BrandButton from '@/components/ui/BrandButton'
-import SectionWrapper from '@/components/ui/SectionWrapper'
+import BrandButton from "@/components/ui/BrandButton";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const CtaSection = () => (
   <SectionWrapper background="muted">
@@ -25,7 +25,6 @@ const CtaSection = () => (
       </Box>
     </Box>
   </SectionWrapper>
-)
+);
 
-export default CtaSection
-
+export default CtaSection;

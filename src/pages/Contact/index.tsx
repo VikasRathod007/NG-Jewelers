@@ -1,44 +1,44 @@
 import {
-  Alert,
+  // Alert,
   Box,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  TextField,
+  // TextField,
   Typography,
 } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PlaceIcon from "@mui/icons-material/Place";
-import { useForm } from "react-hook-form";
-import { useState } from "react";
+// import { useForm } from "react-hook-form";
+// import { useState } from "react";
 
-import BrandButton from "@/components/ui/BrandButton";
+// import BrandButton from "@/components/ui/BrandButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import SEOHead from "@/components/ui/SEOHead";
 import { brandIdentity } from "@/data/brand";
 import { pageMeta } from "@/data/meta";
 
-type ContactFormValues = {
-  name: string;
-  phone: string;
-  email: string;
-  message: string;
-};
+// type ContactFormValues = {
+//   name: string;
+//   phone: string;
+//   email: string;
+//   message: string;
+// };
 
 const ContactPage = () => {
   const meta = pageMeta.contact;
-  const { register, handleSubmit, reset } = useForm<ContactFormValues>();
-  const [submitted, setSubmitted] = useState(false);
+  // const { register, handleSubmit, reset } = useForm<ContactFormValues>();
+  // const [submitted, setSubmitted] = useState(false);
 
-  const onSubmit = (values: ContactFormValues) => {
-    console.table(values);
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 4000);
-  };
+  // const onSubmit = (values: ContactFormValues) => {
+  //   console.table(values);
+  //   setSubmitted(true);
+  //   reset();
+  //   setTimeout(() => setSubmitted(false), 4000);
+  // };
 
   return (
     <>

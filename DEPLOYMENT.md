@@ -53,13 +53,11 @@ https://vikasrathod007.github.io/NG-Jewelers/
 ### If deployment fails:
 
 1. **Check Actions Logs**:
-
    - Go to **Actions** tab
    - Click on the failed workflow run
    - Check the error messages in the logs
 
 2. **Common Issues**:
-
    - **Node version**: The workflow uses Node 20, which should work
    - **Build errors**: Check if `pnpm build` works locally
    - **Permissions**: Make sure GitHub Pages is enabled in Settings

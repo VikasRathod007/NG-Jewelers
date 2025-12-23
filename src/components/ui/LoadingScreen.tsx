@@ -1,13 +1,13 @@
-import { Box, CircularProgress, Typography } from '@mui/material'
+import { Box, CircularProgress, Typography } from "@mui/material";
 
 const LoadingScreen = () => (
   <Box
     sx={{
-      minHeight: '50vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
+      minHeight: "50vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
       gap: 2,
     }}
   >
@@ -16,7 +16,6 @@ const LoadingScreen = () => (
       Crafting your experience…
     </Typography>
   </Box>
-)
+);
 
-export default LoadingScreen
-
+export default LoadingScreen;

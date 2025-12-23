@@ -1,11 +1,11 @@
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk'
-import PlaceIcon from '@mui/icons-material/Place'
-import ScheduleIcon from '@mui/icons-material/Schedule'
-import { Box, Divider, Link as MuiLink, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import PlaceIcon from "@mui/icons-material/Place";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import { Box, Divider, Link as MuiLink, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
-import { brandIdentity } from '@/data/brand'
-import { primaryNav } from '@/data/navigation'
+import { brandIdentity } from "@/data/brand";
+import { primaryNav } from "@/data/navigation";
 
 const Footer = () => (
   <Box component="footer" className="bg-brand-dark text-white pt-16">
@@ -15,7 +15,7 @@ const Footer = () => (
           <Typography
             variant="h4"
             fontFamily='"Playfair Display", serif'
-            sx={{ color: '#D4AF37' }}
+            sx={{ color: "#D4AF37" }}
           >
             NG Jewellers
           </Typography>
@@ -23,27 +23,27 @@ const Footer = () => (
             variant="body2"
             sx={{
               mt: 2,
-              color: 'rgba(255,255,255,0.7)',
+              color: "rgba(255,255,255,0.7)",
               fontSize: {
-                xs: '0.75rem',
-                sm: '0.875rem',
-                md: '0.875rem',
+                xs: "0.75rem",
+                sm: "0.875rem",
+                md: "0.875rem",
               },
               lineHeight: 1.6,
-              wordBreak: 'break-word',
+              wordBreak: "break-word",
             }}
           >
-            {brandIdentity.tagline.split(' • ').map((part, index, array) => (
+            {brandIdentity.tagline.split(" • ").map((part, index, array) => (
               <Box
                 key={index}
                 component="span"
                 sx={{
                   display: {
-                    xs: 'block',
-                    sm: index < array.length - 1 ? 'inline' : 'block',
-                    md: 'inline',
+                    xs: "block",
+                    sm: index < array.length - 1 ? "inline" : "block",
+                    md: "inline",
                   },
-                  '&:not(:last-child)::after': {
+                  "&:not(:last-child)::after": {
                     content: {
                       xs: '""',
                       sm: '" • "',
@@ -85,7 +85,7 @@ const Footer = () => (
             {brandIdentity.phones.map((phone) => (
               <MuiLink
                 key={phone}
-                href={`tel:${phone.replace(/\s/g, '')}`}
+                href={`tel:${phone.replace(/\s/g, "")}`}
                 underline="none"
                 color="inherit"
                 display="flex"
@@ -106,12 +106,12 @@ const Footer = () => (
         </Box>
       </Box>
 
-      <Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.1)' }} />
+      <Divider sx={{ my: 4, borderColor: "rgba(255,255,255,0.1)" }} />
       <Box
         display="flex"
-        flexDirection={{ xs: 'column', md: 'row' }}
+        flexDirection={{ xs: "column", md: "row" }}
         justifyContent="space-between"
-        alignItems={{ xs: 'flex-start', md: 'center' }}
+        alignItems={{ xs: "flex-start", md: "center" }}
         gap={2}
         pb={4}
       >
@@ -121,7 +121,7 @@ const Footer = () => (
               key={item.path}
               component={Link}
               to={item.path}
-              sx={{ color: 'rgba(255,255,255,0.72)' }}
+              sx={{ color: "rgba(255,255,255,0.72)" }}
             >
               {item.label}
             </Typography>
@@ -133,7 +133,6 @@ const Footer = () => (
       </Box>
     </Box>
   </Box>
-)
+);
 
-export default Footer
-
+export default Footer;

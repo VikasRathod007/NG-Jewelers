@@ -3,17 +3,17 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-} from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import SectionHeading from '@/components/ui/SectionHeading'
-import SectionWrapper from '@/components/ui/SectionWrapper'
-import SEOHead from '@/components/ui/SEOHead'
-import { faqs } from '@/data/faqs'
-import { pageMeta } from '@/data/meta'
+import SectionHeading from "@/components/ui/SectionHeading";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import SEOHead from "@/components/ui/SEOHead";
+import { faqs } from "@/data/faqs";
+import { pageMeta } from "@/data/meta";
 
 const FaqPage = () => {
-  const meta = pageMeta.faq
+  const meta = pageMeta.faq;
 
   return (
     <>
@@ -37,8 +37,7 @@ const FaqPage = () => {
         ))}
       </SectionWrapper>
     </>
-  )
-}
+  );
+};
 
-export default FaqPage
-
+export default FaqPage;

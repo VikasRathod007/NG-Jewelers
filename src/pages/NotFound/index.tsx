@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
+import { Box, Typography } from "@mui/material";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-import BrandButton from '@/components/ui/BrandButton'
-import SectionWrapper from '@/components/ui/SectionWrapper'
+import BrandButton from "@/components/ui/BrandButton";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const NotFoundPage = () => (
   <>
@@ -22,7 +22,6 @@ const NotFoundPage = () => (
       </Box>
     </SectionWrapper>
   </>
-)
+);
 
-export default NotFoundPage
-
+export default NotFoundPage;
