@@ -15,7 +15,6 @@ import {
 import { Link, useLocation } from 'react-router-dom'
 import { useMemo, useState } from 'react'
 
-import { brandIdentity } from '@/data/brand'
 import { highlightNav, primaryNav } from '@/data/navigation'
 import BrandButton from '@/components/ui/BrandButton'
 import logoImage from '@/assets/images/NG_logo.png'
@@ -41,7 +40,14 @@ const Navbar = () => {
           backgroundColor: 'rgba(253, 251, 248, 0.9)',
         }}
       >
-        <Toolbar sx={{ gap: { xs: 1, sm: 2, md: 3 }, px: { xs: 1, sm: 2, md: 3 } }}>
+        <Toolbar
+          sx={{
+            gap: { xs: 1, sm: 2, md: 3 },
+            px: { xs: 1, sm: 2, md: 3 },
+            py: { xs: 0.5, sm: 0.75, md: 1 },
+            minHeight: { xs: 56, sm: 64, md: 72, lg: 80 },
+          }}
+        >
           <Box
             component={Link}
             to="/"
@@ -61,8 +67,8 @@ const Navbar = () => {
               src={logoImage}
               alt="NG Jewellers Logo"
               sx={{
-                width: { xs: 40, sm: 44, md: 48 },
-                height: { xs: 40, sm: 44, md: 48 },
+                width: { xs: 44, sm: 52, md: 60, lg: 68 },
+                height: { xs: 44, sm: 52, md: 60, lg: 68 },
                 objectFit: 'contain',
                 flexShrink: 0,
               }}
@@ -73,7 +79,7 @@ const Navbar = () => {
                 fontFamily='"Playfair Display", serif'
                 sx={{
                   lineHeight: 1.2,
-                  fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.5rem' },
+                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' },
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
@@ -87,13 +93,13 @@ const Navbar = () => {
                 color="text.secondary"
                 sx={{
                   display: { xs: 'none', sm: 'block' },
-                  fontSize: { xs: '0.65rem', sm: '0.75rem' },
+                  fontSize: { xs: '0.7rem', sm: '0.8rem', md: '0.85rem' },
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
                   whiteSpace: 'nowrap',
                 }}
               >
-                {brandIdentity.location}
+                {/* {brandIdentity.location} */}
               </Typography>
             </Box>
           </Box>

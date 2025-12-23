@@ -8,8 +8,8 @@ const CraftsmanshipSection = () => (
   <SectionWrapper>
     <SectionHeading
       eyebrow="Craftsmanship"
-      title="Modern tooling. Heritage finishing."
-      subtitle="A transparent, trackable production line ensures your jewellery is loved at every stage."
+  title="Modern tools. Traditional finishing."
+  subtitle="You can understand each step of how we make your jewellery."
       align="center"
     />
 

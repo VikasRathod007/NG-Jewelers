@@ -3,36 +3,43 @@ import DiamondIcon from '@mui/icons-material/Diamond'
 import VerifiedIcon from '@mui/icons-material/Verified'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping'
 import SecurityIcon from '@mui/icons-material/Security'
+import PlaceIcon from '@mui/icons-material/Place'
+import PublicIcon from '@mui/icons-material/Public'
 
 import SectionHeading from '@/components/ui/SectionHeading'
 import SectionWrapper from '@/components/ui/SectionWrapper'
 import SEOHead from '@/components/ui/SEOHead'
 import { brandIdentity } from '@/data/brand'
 import { pageMeta } from '@/data/meta'
-import { processSnapshots, whyChooseUsCards } from '@/data/services'
+import {
+  aboutSpecializationsExtended,
+  aboutWhyChoosePoints,
+  processSnapshots,
+  whyChooseUsCards,
+} from '@/data/services'
 
-const timeline = [
-  {
-    year: '1998',
-    title: 'Studio opens in Raj Ratan Complex',
-    detail: 'Single workshop focused on handmade gold bangles.',
-  },
-  {
-    year: '2008',
-    title: 'Bridal couture desk launches',
-    detail: 'Dedicated bridal stylists & gemstone sourcing network.',
-  },
-  {
-    year: '2016',
-    title: 'CAD & AR previews introduced',
-    detail: 'Hybrid process blending tech with artisan finishing.',
-  },
-  {
-    year: '2024',
-    title: 'Wholesale lab & digital showroom',
-    detail: 'B2B drops plus virtual fittings for global patrons.',
-  },
-]
+// const timeline = [
+//   {
+//     year: '1998',
+//     title: 'Studio opens in Raj Ratan Complex',
+//     detail: 'Single workshop focused on handmade gold bangles.',
+//   },
+//   {
+//     year: '2008',
+//     title: 'Bridal couture desk launches',
+//     detail: 'Dedicated bridal stylists & gemstone sourcing network.',
+//   },
+//   {
+//     year: '2016',
+//     title: 'CAD & AR previews introduced',
+//     detail: 'Hybrid process blending tech with artisan finishing.',
+//   },
+//   {
+//     year: '2024',
+//     title: 'Wholesale lab & digital showroom',
+//     detail: 'B2B drops plus virtual fittings for global patrons.',
+//   },
+// ]
 
 const AboutPage = () => {
   const meta = pageMeta.about
@@ -44,17 +51,15 @@ const AboutPage = () => {
       <SectionWrapper>
         <SectionHeading
           eyebrow="About NG Jewellers"
-          title="A 27-year legacy of gold artistry"
+          title="A 60+ year legacy of gold artistry"
           subtitle={brandIdentity.subheading}
         />
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 720 }}>
-          Established in 1998, NG Jewellers blends heritage techniques with modern tools to
-          craft bespoke jewellery that feels intimate yet editorial. Our artisans, gemstone
-          experts and client concierge team work under one roof inside Raj Ratan Complex.
+           NG Jewellers is a leading manufacturer of handmade and custom gold jewellery in Indore, known for exquisite craftsmanship, modern designs, and ethical business practices. With years of expertise in traditional jewellery making, we specialize in creating unique, custom-designed gold jewellery pieces that reflect both timeless elegance and modern style.
         </Typography>
       </SectionWrapper>
 
-      <SectionWrapper background="muted">
+      {/* <SectionWrapper background="muted">
         <SectionHeading
           eyebrow="Timeline"
           title="Milestones shaped by our patrons"
@@ -73,7 +78,7 @@ const AboutPage = () => {
             </Card>
           ))}
         </Box>
-      </SectionWrapper>
+      </SectionWrapper> */}
 
       <SectionWrapper>
         <SectionHeading
@@ -97,88 +102,124 @@ const AboutPage = () => {
 
       <SectionWrapper background="muted">
         <SectionHeading
+          eyebrow="Our Specialization"
+          title="Handmade gold jewellery for every milestone"
+          subtitle="From daily wear to bridal trousseau and bulk B2B manufacturing, NG Jewellers is a full-service gold atelier."
+          align="center"
+        />
+        <Box className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {aboutSpecializationsExtended.map((spec) => (
+            <Card key={spec.title} className="h-full">
+              <CardContent>
+                <Typography variant="h6">{spec.title}</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {spec.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </SectionWrapper>
+
+      <SectionWrapper background="muted">
+        <SectionHeading
           eyebrow="Our Promise"
-          title="What sets us apart"
+          title="Why choose NG Jewellers?"
+          subtitle="Skilled artisans, hallmarked purity and a relationship-first approach make NG more than just a showroom."
           align="center"
         />
         <Box className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <Card className="h-full text-center">
+          {aboutWhyChoosePoints.map((point) => (
+            <Card key={point.title} className="h-full text-center">
+              <CardContent>
+                {point.title === 'Skilled Artisans' && (
+                  <DiamondIcon
+                    sx={{
+                      fontSize: 48,
+                      color: 'primary.main',
+                      mb: 2,
+                      mx: 'auto',
+                      display: 'block',
+                    }}
+                  />
+                )}
+                {point.title === '100% Hallmarked Gold' && (
+                  <VerifiedIcon
+                    sx={{
+                      fontSize: 48,
+                      color: 'primary.main',
+                      mb: 2,
+                      mx: 'auto',
+                      display: 'block',
+                    }}
+                  />
+                )}
+                {point.title === 'Bulk Manufacturing Ready' && (
+                  <LocalShippingIcon
+                    sx={{
+                      fontSize: 48,
+                      color: 'primary.main',
+                      mb: 2,
+                      mx: 'auto',
+                      display: 'block',
+                    }}
+                  />
+                )}
+                {point.title === 'Transparent & Relationship-First' && (
+                  <SecurityIcon
+                    sx={{
+                      fontSize: 48,
+                      color: 'primary.main',
+                      mb: 2,
+                      mx: 'auto',
+                      display: 'block',
+                    }}
+                  />
+                )}
+                <Typography variant="h6" gutterBottom>
+                  {point.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {point.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <SectionHeading
+          eyebrow="Service Areas"
+          title="Where we currently serve"
+          subtitle="From our Indore studio to cities across Madhya Pradesh, with trusted logistics partners for pan-India delivery."
+          align="center"
+        />
+        <Box className="grid gap-6 md:grid-cols-2">
+          <Card className="h-full">
             <CardContent>
-              <DiamondIcon
-                sx={{
-                  fontSize: 48,
-                  color: 'primary.main',
-                  mb: 2,
-                  mx: 'auto',
-                  display: 'block',
-                }}
-              />
-              <Typography variant="h6" gutterBottom>
-                Premium Quality
-              </Typography>
+              <Box className="flex items-center gap-2 mb-1 justify-start">
+                <PlaceIcon color="primary" />
+                <Typography variant="h6" gutterBottom>
+                  Core service cities
+                </Typography>
+              </Box>
               <Typography variant="body2" color="text.secondary">
-                Every piece is crafted with precision using the finest materials and traditional
-                techniques passed down through generations.
+                {brandIdentity.serviceAreas.join(', ')} and surrounding regions across
+                Madhya Pradesh with doorstep delivery options.
               </Typography>
             </CardContent>
           </Card>
-          <Card className="h-full text-center">
+          <Card className="h-full">
             <CardContent>
-              <VerifiedIcon
-                sx={{
-                  fontSize: 48,
-                  color: 'primary.main',
-                  mb: 2,
-                  mx: 'auto',
-                  display: 'block',
-                }}
-              />
-              <Typography variant="h6" gutterBottom>
-                BIS Hallmarked
-              </Typography>
+              <Box className="flex items-center gap-2 mb-1 justify-start">
+                <PublicIcon color="primary" />
+                <Typography variant="h6" gutterBottom>
+                  Beyond Madhya Pradesh
+                </Typography>
+              </Box>
               <Typography variant="body2" color="text.secondary">
-                All our jewellery is BIS certified, ensuring purity and authenticity. Your trust
-                is our foundation.
-              </Typography>
-            </CardContent>
-          </Card>
-          <Card className="h-full text-center">
-            <CardContent>
-              <LocalShippingIcon
-                sx={{
-                  fontSize: 48,
-                  color: 'primary.main',
-                  mb: 2,
-                  mx: 'auto',
-                  display: 'block',
-                }}
-              />
-              <Typography variant="h6" gutterBottom>
-                Nationwide Delivery
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                We deliver across India through trusted logistics partners, ensuring your precious
-                jewellery reaches you safely.
-              </Typography>
-            </CardContent>
-          </Card>
-          <Card className="h-full text-center">
-            <CardContent>
-              <SecurityIcon
-                sx={{
-                  fontSize: 48,
-                  color: 'primary.main',
-                  mb: 2,
-                  mx: 'auto',
-                  display: 'block',
-                }}
-              />
-              <Typography variant="h6" gutterBottom>
-                Secure & Transparent
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Complete transparency in pricing, gold weight calculations, and documentation.
-                Your peace of mind matters to us.
+                {brandIdentity.logisticsNarrative} {brandIdentity.exportNarrative}
               </Typography>
             </CardContent>
           </Card>
