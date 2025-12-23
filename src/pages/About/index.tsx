@@ -65,7 +65,7 @@ const AboutPage = () => {
           traditional jewellery making, we specialize in creating unique,
           custom-designed gold jewellery pieces that reflect both timeless
           elegance and modern style.
-        </Typography>
+
       </SectionWrapper>
 
       {/* <SectionWrapper background="muted">

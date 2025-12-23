@@ -42,7 +42,7 @@ const ServiceAreasSection = () => (
           ))}
         </Box>
         <Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>
-          We also do pan india shipping through trusted logistics partners.
+          We also do Pan India shipping through trusted logistics partners.
         </Typography>
       </Box>
     </Box>
